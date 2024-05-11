@@ -17,14 +17,13 @@ public static class Program
         var personalServerTaskProject = new PersonalServerTaskProject();
 
         // Create a new list of background server task projects
-        var backgroundProjects = new ServerTaskProject[]
+        _ = new ServerTaskProject[]
         {
             BasketballNewsletterProject.Instance
         };
 
         // Start the server task manager
-        ServerTaskManager.Instance.AddProject(personalServerTaskProject);
-        ServerTaskManager.Instance.Start(backgroundProjects);
+        ServerTaskManager.Instance.Start();
 
         // Run the project (this will block the main thread)
         personalServerTaskProject.Start();
