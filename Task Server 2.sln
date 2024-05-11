@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task Server 2", "Task Server 2\Task Server 2.csproj", "{8075531C-89A2-4C07-9DE8-75ADF1CD8652}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal Task Server", "Personal Task Server\Personal Task Server.csproj", "{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{8075531C-89A2-4C07-9DE8-75ADF1CD8652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8075531C-89A2-4C07-9DE8-75ADF1CD8652}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8075531C-89A2-4C07-9DE8-75ADF1CD8652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
