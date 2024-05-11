@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task Server 2", "Task Serve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal Task Server", "Personal Task Server\Personal Task Server.csproj", "{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basketball Newsletter", "Basketball Newsletter\Basketball Newsletter.csproj", "{EBDA90A7-EFEB-4CBC-B1B9-E85E19F80B36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8CB9A9C-B0A2-4857-BEC8-D647525808DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDA90A7-EFEB-4CBC-B1B9-E85E19F80B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDA90A7-EFEB-4CBC-B1B9-E85E19F80B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDA90A7-EFEB-4CBC-B1B9-E85E19F80B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDA90A7-EFEB-4CBC-B1B9-E85E19F80B36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

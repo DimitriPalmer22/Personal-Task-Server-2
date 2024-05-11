@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Basketball Newsletter\Basketball Newsletter.csproj" />
       <ProjectReference Include="..\Task Server 2\Task Server 2.csproj" />
     </ItemGroup>
 

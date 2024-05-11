@@ -5,7 +5,7 @@ using Task_Server_2.ServerTasks.HelperServerTasks;
 
 namespace Personal_Task_Server;
 
-public class PersonalServerTaskProject : ServerTaskProject
+public sealed class PersonalServerTaskProject : ServerTaskProject
 {
     private bool _running;
 

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>Basketball_Newsletter</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Task Server 2\Task Server 2.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Python Basketball Newsletter\main.py" />
+      <Content Include="Python Basketball Newsletter\main.py">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Python Basketball Newsletter\requirements.txt" />
+      <Content Include="Python Basketball Newsletter\requirements.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
