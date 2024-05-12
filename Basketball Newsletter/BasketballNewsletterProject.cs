@@ -1,5 +1,8 @@
-﻿using Task_Server_2.ServerTasks;
+﻿using Task_Server_2.DebugLogger;
+using Task_Server_2.ServerTasks;
 using Task_Server_2.ServerTasks.ActivationConditions;
+using Task_Server_2.ServerTasks.HelperServerTasks;
+using Task_Server_2.ServerTasks.ServerTaskEventArgs;
 
 namespace Basketball_Newsletter;
 
@@ -29,14 +32,35 @@ public sealed class BasketballNewsletterProject : ServerTaskProject
 
     private BasketballNewsletterProject()
     {
-        // Create a new CheckForUpdateTask that will run every minute
+        // Create a new CheckForUpdateTask that will run once
         _checkForUpdateTask = new CheckForUpdateTask(
-            new RecurringActivationCondition(
-                DateTime.Now,
-                new TimeSpan(days: 0, hours: 0, minutes: 1, seconds: 0))
+            new SimpleActivationCondition()
         );
 
+        var newsletterCheckTasks = new ServerTask[]
+        {
+            // Create a new EnsureVenvTask that will run once
+            new EnsureVenvTask(
+                "Ensure Python Environment",
+                new SimpleActivationCondition()
+            ),
+
+            _checkForUpdateTask,
+        };
+
+        // Add both tasks to a server task group that will run repeatedly
+        var groupTask = new ServerTaskGroup(
+            "Basketball Newsletter Tasks",
+            new RecurringActivationCondition(
+                DateTime.Now,
+                new TimeSpan(days: 0, hours: 0, minutes: 0, seconds: 2, milliseconds: 0)
+            ),
+            ServerTaskGroupType.Sequential,
+            newsletterCheckTasks
+        );
+
+
         // Add the CheckForUpdateTask to the project
-        EnqueueTask(_checkForUpdateTask);
+        EnqueueTask(groupTask);
     }
 }
